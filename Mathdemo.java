@@ -2,7 +2,7 @@ package com_520it;
 
 import java.math.BigDecimal;
 
-//ʹ��BigDecimal��
+//能够显示汉字么
 public class Mathdemo {
 	public static void main(String[] args) {
 		double ran = Math.random();
