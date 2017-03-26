@@ -1,0 +1,25 @@
+package com_520it_date;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateUtilDemo {
+	public static void main(String[] args) {
+		System.out.println(DateToString(new Date(), "yyyy-MM-dd HH:mm:ss"));
+		System.out.println(DateToString(new Date(), "yyyy/MM/dd HH/mm/ss"));
+		System.out.println(DateToString(new Date(), "yyyy-MM-dd"));
+	}
+
+	public static String DateToString(Date date, String pattern) {
+		SimpleDateFormat s = new SimpleDateFormat();
+		s.applyPattern(pattern);
+		return s.format(date);
+	}
+
+	// 格式化操作，把String类型--》Date类型
+	public static Date StringToDate(String date) throws ParseException {
+		SimpleDateFormat s = new SimpleDateFormat();
+		return s.parse(date);
+	}
+}
